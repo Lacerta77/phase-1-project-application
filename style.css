@@ -3,21 +3,21 @@ body    {
 }
 
 h1  {
-    background-color: grey;
+    font-weight: bolder;
     text-align: center;
 }
 
 h2  {
     font-weight: bold;
     text-align: center;
-    padding-bottom: 100px;
-}
-
-div   {
-    float: left;
-    width: 50%;
 }
 
 nav     {
+    text-align: center;
+}
+
+div     {
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
 }

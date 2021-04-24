@@ -1,22 +1,73 @@
 //fetch fanduel odds
-  function fetchfandueldata() {
-    fetch('https://api.the-odds-api.com/v3/odds/?apiKey=33ec130f94414bb4491dbddaeb8d3e0e&sport=americanfootball_nfl_super_bowl_winner&region=us')
-      .then(response => response.json())
-      .then(data => console.log(data.data[0].sites[2].odds.outrights));
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    function displayfdodds(){
+        return fetch("https://api.the-odds-api.com/v3/odds/?apiKey=33ec130f94414bb4491dbddaeb8d3e0e&sport=americanfootball_nfl_super_bowl_winner&region=us")
+        .then(resp => resp.json())
+        .then(json =>{
+            const product2 = json.data[0]
+            //console.log(json);
+            console.log(product2)
+            console.log(product2.sites[2].odds.outrights[0].name + product2.sites[2].odds.outrights[0].price);
+            product2.sites[2].odds.outrights.forEach(Team => {
+              const price = Team.price
+              console.log(Team)
+              console.log(price)
+              let odd = document.createElement('p');
+              odd.innerText = Team.name + `:  Odds: ${price}-1`;
+              document.getElementById('fdOdds').appendChild(odd);
+            })
+        })
+        }
+        displayfdodds();
+    })
 
 
 //fetch draftkings odds
-  function fetchdraftkingsdata() {
-    fetch('https://api.the-odds-api.com/v3/odds/?apiKey=33ec130f94414bb4491dbddaeb8d3e0e&sport=americanfootball_nfl_super_bowl_winner&region=us')
-      .then(response => response.json())
-      .then(data => console.log(data.data[0].sites[4].odds.outrights));
-    }
+document.addEventListener('DOMContentLoaded', () => {
+  function displaydkodds(){
+      return fetch("https://api.the-odds-api.com/v3/odds/?apiKey=33ec130f94414bb4491dbddaeb8d3e0e&sport=americanfootball_nfl_super_bowl_winner&region=us")
+      .then(resp => resp.json())
+      .then(json =>{
+          const product2 = json.data[0]
+          //console.log(json);
+          console.log(product2)
+          console.log(product2.sites[4].odds.outrights[0].name + product2.sites[4].odds.outrights[0].price);
+          product2.sites[4].odds.outrights.forEach(Team => {
+            const price = Team.price
+            console.log(Team)
+            console.log(price)
+            let odd = document.createElement('p');
+            odd.innerText = Team.name + `:  Odds: ${price}-1`;
+            document.getElementById('dkOdds').appendChild(odd);
+          })
+      })
+      }
+      displaydkodds();
+  })
+
+
+
 
 
 //fetch fox bet odds
-  function fetchfoxbetdata() {
-    fetch('https://api.the-odds-api.com/v3/odds/?apiKey=33ec130f94414bb4491dbddaeb8d3e0e&sport=americanfootball_nfl_super_bowl_winner&region=us')
-        .then(response => response.json())
-        .then(data => console.log(data.data[0].sites[5].odds.outrights));
+document.addEventListener('DOMContentLoaded', () => {
+  function displayfbodds(){
+      return fetch("https://api.the-odds-api.com/v3/odds/?apiKey=33ec130f94414bb4491dbddaeb8d3e0e&sport=americanfootball_nfl_super_bowl_winner&region=us")
+      .then(resp => resp.json())
+      .then(json =>{
+          const product2 = json.data[0]
+          //console.log(json);
+          //console.log(product2)
+          //console.log(product2.sites[5].odds.outrights[0].name + product2.sites[5].odds.outrights[0].price);
+          product2.sites[5].odds.outrights.forEach(Team => {
+          const price = Team.price
+          console.log(Team)
+          console.log(price)
+          let odd = document.createElement('p');
+          odd.innerText = Team.name + `:  Odds: ${price}-1`;
+          document.getElementById('fbOdds').appendChild(odd);
+        })
+      })
       }
+      displayfbodds();
+  })
