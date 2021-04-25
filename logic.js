@@ -1,7 +1,7 @@
 //fetch fanduel odds
 document.addEventListener('DOMContentLoaded', () => {
     function displayfdodds(){
-        return fetch("https://api.the-odds-api.com/v3/odds/?apiKey=33ec130f94414bb4491dbddaeb8d3e0e&sport=americanfootball_nfl_super_bowl_winner&region=us")
+        return fetch("https://api.the-odds-api.com/v3/odds/?apiKey=95a7098bb422d018a0485be32e0ca289&sport=americanfootball_nfl_super_bowl_winner&region=us")
         .then(resp => resp.json())
         .then(json =>{
             const product2 = json.data[0]
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //fetch draftkings odds
 document.addEventListener('DOMContentLoaded', () => {
   function displaydkodds(){
-      return fetch("https://api.the-odds-api.com/v3/odds/?apiKey=33ec130f94414bb4491dbddaeb8d3e0e&sport=americanfootball_nfl_super_bowl_winner&region=us")
+      return fetch("https://api.the-odds-api.com/v3/odds/?apiKey=95a7098bb422d018a0485be32e0ca289&sport=americanfootball_nfl_super_bowl_winner&region=us")
       .then(resp => resp.json())
       .then(json =>{
           const product2 = json.data[0]
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //fetch fox bet odds
 document.addEventListener('DOMContentLoaded', () => {
   function displayfbodds(){
-      return fetch("https://api.the-odds-api.com/v3/odds/?apiKey=33ec130f94414bb4491dbddaeb8d3e0e&sport=americanfootball_nfl_super_bowl_winner&region=us")
+      return fetch("https://api.the-odds-api.com/v3/odds/?apiKey=95a7098bb422d018a0485be32e0ca289&sport=americanfootball_nfl_super_bowl_winner&region=us")
       .then(resp => resp.json())
       .then(json =>{
           const product2 = json.data[0]
